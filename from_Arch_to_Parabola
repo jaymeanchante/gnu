@@ -1,0 +1,45 @@
+# 1. Add Parabola repos
+
+sudo vim /etc/pacman.conf
+
+Uncomment "RemoteFileSigLevel = Required" and changed "Required" by "Never", save and exit
+
+# Add all parabola devs keyrings
+sudo pacman -U https://parabola.nu/packages/libre/any/parabola-keyring/download/
+# Add the parabola mirrors
+sudo pacman -U https:parabola.nu/packages/libre/any/pacman-mirrorlist/download/
+
+# Change back /etc/pacman.conf
+# Before the [core] repositories write:
+
+[libre]
+Include = /etc/pacman.d/mirrorlist
+
+# After the [community] write:
+
+[nonprism]
+Include = /etc/pacman.d/mirrorlist
+
+# Save the file
+
+# Back up the "old" mirrorlist
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.arch
+
+# Put the mirrorlist.pacnew in place of the "old" mirrorlist
+cp /etc/pacman.d/mirrorlist.pacnew /etc/pacman.d/mirrorlist
+
+# Clear the pacman cache:
+sudo pacman -Scc
+# Reply "yes" to both questions
+
+# Sync pacman
+sudo pacman -Syy
+
+# Install, upgrade and downgrade all packages, explicitly name pacman to update it, your-freedom is a blacklist of free software only, your-privacy is blacklist of privacy packages
+sudo pacman -Suu pacman your-freedom your-privacy
+
+# Renew grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+# Using the AUR
+create a function in ~/.bashrc, if using LARBS is "aurinstall()"
