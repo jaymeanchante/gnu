@@ -1,0 +1,31 @@
+# Aumenta o brilho da tela:
+sudo tee /sys/class/backlight/acpi_video0/brightness <<< 15
+
+# Wifi
+nmcli dev connect wifi "nome da rede" password "senha"
+
+# Mudei o ~/.bash_profile para iniciar X automaticamente
+vim ~/.bash_profile
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+	startx
+fi
+[ESC]
+:x
+[ENTER]
+
+# Coloquei o teclado no padrão ABNT2
+# não funciona o backslack (acima do CTRL-esq) e é temporário:
+setxkmap -model thinkpad -layout br
+
+# para mudanças persistentes (gera um arquivo em /etc/X11/xorg.conf.d/00-keyboard.conf):
+# localectl set-x11-keymap [layout] [model] [variant]
+localectl set-x11-keymap br thinkpad
+
+# Installed Redshift:
+sudo pacman -S redhist
+vim ~/.config/i3/config
+exec_always no-startup-id redshift
+
+
+
+
