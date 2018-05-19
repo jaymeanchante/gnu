@@ -1,9 +1,13 @@
 # set the keyboard layout as ABNT
 setxkbmap -model thinkpad -layout br
+localectl set-x11-keymap br thinkpad
+# remove gnome-orca screen-reader
 apt-get purge --auto-remove gnome-orca
+# install git, htop, pip3 etc.
+apt-get install htop
 apt-get install git
 apt-get install python3-pip
-pip3 install --upgade pip
+pip3 install --upgrade pip
 pip3 install numpy pandas jupyter
 apt-get install libssl-dev libcurl4-openssl-dev
 apt-get install r-base r-base-dev
