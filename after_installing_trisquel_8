@@ -6,6 +6,8 @@ apt-get purge --auto-remove gnome-orca
 # install git, htop, pip3 etc.
 apt-get install htop
 apt-get install git
+apt-get install redshift
+# must manually set localtions `redshift -l -25:-50` for Curitiba Lat:Lon
 apt-get install python3-pip
 pip3 install --upgrade pip
 pip3 install numpy pandas jupyter
