@@ -1,0 +1,6 @@
+mpv + youtube-dl:
+mpv -ytdl --ytdl-format=best linkyoutube
+
+para pesquisar uso o smtube ou minitube
+
+youtube-dl descarrega os DRMs, uma alternativa é o notabug.org/GPast/avideo + github.com/trizen/youtube-viewer
