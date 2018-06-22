@@ -2,17 +2,27 @@
 setxkbmap -model thinkpad -layout br
 localectl set-x11-keymap br thinkpad
 # remove gnome-orca screen-reader
-apt-get purge --auto-remove gnome-orca
+sudo apt-get purge --auto-remove gnome-orca
 # install git, htop, pip3 etc.
-apt-get install htop
-apt-get install git
-apt-get install redshift
+sudo apt-get install htop -y
+sudo apt-get install git -y
+sudo apt-get install redshift redhisft-gtk -y
 # must manually set localtions `redshift -l -25:-50` for Curitiba Lat:Lon
-apt-get install python3-pip
-pip3 install --upgrade pip
-pip3 install numpy pandas jupyter
-apt-get install libssl-dev libcurl4-openssl-dev
-apt-get install r-base r-base-dev
+
+# setting Python3
+sudo apt-get install python3-pip
+sudo pip3 install --upgrade pip
+sudo pip3 install numpy pandas jupyter
+
+# setting Python2
+sudo apt-get install python-pip -y
+sudo pip2 install --upgrade pip
+python2 -m pip install ipykernel
+python2 -m ipykernel install --user
+
+# installing R
+sudo apt-get install libssl-dev libcurl4-openssl-dev -y
+sudo apt-get install r-base r-base-dev -y
 #install IRkernel
-apt-get install libxml2-dev
+sudo apt-get install libxml2-dev -y
 #install.packages('tidyverse', repos = 'https://cran-r.c3sl.ufpr.br/')
