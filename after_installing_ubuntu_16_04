@@ -3,8 +3,16 @@ sudo apt-add-repository -y ppa:teejee2008/ppa
 sudo apt-get update
 sudo apt-get install timeshift
 
-# redshift
+## redshift
 sudo apt-get install redshift redshift-gtk
+
+## unity-tweak-tools
+sodu apt-get install -y unity-tweak-tools
+
+## arch theme
+sudo add-apt-repository -y ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install -y arc-theme
 
 ## nvidia drivers:
 sudo apt-get purge nvidia*
