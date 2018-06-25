@@ -14,6 +14,11 @@ sudo add-apt-repository -y ppa:noobslab/themes
 sudo apt-get update
 sudo apt-get install -y arc-theme
 
+## MEGAsync
+wget https://mega.nz/linux/MEGAsync/xUbuntu_16.04/amd64/megasync-xUbuntu_16.04_amd64.deb
+sudo apt-get install libtinyxml2-2v5 libc-ares2 libcrypto++9v5 libmediainfo0v5 libqt4-svg libzen0v5
+dpkg -i megasync-xUbuntu_16.04_amd64.deb
+
 ## nvidia drivers:
 sudo apt-get purge nvidia*
 sudo add-apt-repository ppa:graphics-drivers
