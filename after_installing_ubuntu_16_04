@@ -3,6 +3,9 @@ sudo apt-add-repository -y ppa:teejee2008/ppa
 sudo apt-get update
 sudo apt-get install timeshift
 
+## vim
+sudo apt-get install -y vim
+
 ## redshift
 sudo apt-get install redshift redshift-gtk
 
