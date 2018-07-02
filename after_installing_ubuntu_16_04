@@ -51,20 +51,15 @@ sudo apt-get install chromium-browser
 sudo apt-get purge nvidia*
 sudo add-apt-repository ppa:graphics-drivers
 sudo apt-get update
-# sudo apt-get install nvidia-390
-sudo apt-get install nvidia-current
+sudo apt-get install nvidia-390
 # sudo vim /etc/modprobe.d/blacklist-nouveau.conf with the following contents:
 # blacklist nouveau
 # options nouveau modeset=0
-# run: sudo update-initramfs -u
-# sudo apt-mark hold nvidia-304
-
+sudo apt-mark hold nvidia-390
+sudo apt-get install nvidia-modprobe
 # reboot!!!
 # check if the drivers kick-in
 lsmod | grep nvidia
-# sudo apt-get install nvidia-modprobe
-# to hold nvidia-drivers version:
-# sudo apt-mark hold nvidia-390
 
 ## docker
 # remove all docker versions
