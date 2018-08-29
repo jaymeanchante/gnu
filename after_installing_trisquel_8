@@ -26,3 +26,8 @@ sudo apt-get install r-base r-base-dev -y
 #install IRkernel
 sudo apt-get install libxml2-dev -y
 #install.packages('tidyverse', repos = 'https://cran-r.c3sl.ufpr.br/')
+
+# pspp
+sudo add-apt-repository ppa:adamzammit/pspp -y
+sudo apt-get update
+sudo apt-get install pspp -y
