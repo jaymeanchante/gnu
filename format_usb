@@ -1,0 +1,20 @@
+# check which partition you want to format
+lsblk
+
+# optional: write 0's to clean the partition
+sudo dd status=progress if=/dev/zero of=/dev/sdb bs=100M && sync 
+
+# create partition table
+sudo fdisk /dev/sdb
+o
+n
+ENTER
+ENTER
+ENTER
+w
+
+# make FAT partition
+sudo mkfs.vfat -n 'name_for_your_pendrive' /dev/sdy1
+
+# eject
+sudo eject /dev/sdb
