@@ -1,7 +1,8 @@
 # check which partition you want to format
 lsblk
+# assuming device is on /dev/sdb
 
-# optional: write 0's to clean the partition
+# optional: write 0's to clean the partition, can take a while...
 sudo dd status=progress if=/dev/zero of=/dev/sdb bs=100M && sync 
 
 # create partition table
@@ -11,10 +12,13 @@ n
 ENTER
 ENTER
 ENTER
+ENTER
 w
 
-# make FAT partition
-sudo mkfs.vfat -n 'name_for_your_pendrive' /dev/sdy1
-
-# eject
+# either make FAT partition
+sudo mkfs.vfat -n 'name_for_your_pendrive' /dev/sdb1
+# and eject
 sudo eject /dev/sdb
+
+# or write ISO
+sudo dd if=/path/to/iso of=/dev/sdb status=progress bs=4M && sync
