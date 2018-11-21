@@ -1,0 +1,14 @@
+# install 2nd, 3rd etc OS's without bootloader
+# boot into primary OS
+
+# see all partitions
+lsblk
+
+# mount partition
+sudo mount /dev/sdaX /mnt
+
+# install os-prober
+sudo apt-get install os-prober
+
+# update grub2
+sudo grub-mkconfig -o /boot/grub/grub.cfg
