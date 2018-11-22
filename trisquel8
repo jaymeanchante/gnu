@@ -1,12 +1,21 @@
 # set the keyboard layout as ABNT
 setxkbmap -model thinkpad -layout br
 localectl set-x11-keymap br thinkpad
+
+# bluetooth
+sudo apt-get install blueman pulseaudio-module-bluetooth
+pactl load-module module-bluetooth-discover
+# restart, the bluetooth icon should appear in right lower corner
+# make discoverable, pair headphone, change audio output
+# trisquel > System > Preferences > Hardware > Sound
+
 # remove gnome-orca screen-reader
 sudo apt-get purge --auto-remove gnome-orca
+
 # install git, htop, pip3 etc.
-sudo apt-get install htop -y
-sudo apt-get install git -y
-sudo apt-get install redshift redhisft-gtk -y
+sudo apt-get install -y htop
+sudo apt-get install -y git
+sudo apt-get install -y redshift redhisft-gtk
 # must manually set localtions `redshift -l -25:-50` for Curitiba Lat:Lon
 
 # setting Python3
