@@ -1,0 +1,125 @@
+1. Check UEFI (vs traditional BIOS)
+
+$  ls /sys/firmware/efi/efivars
+
+   if: "ls: cannot access '/sys/firmware/efi/efivars': No such files or directory", then you can proceed with the tutorial
+
+2. Check internet connection
+
+$  ping -c 3 google.com
+
+   If ethernet not working, use wifi:
+
+$  wifi-menu
+
+   sync clock via internet:
+
+$  timedatectl set-ntp true
+
+3. Partition disk:
+
+$  fdisk /dev/sda
+$  p  # print out partitions
+$  d  # delete partitions
+
+    3.1. Boot partition
+
+$  n
+$  p
+$  1
+$  [ENTER]
+$  +200M
+$  Y  # remove signature
+
+    3.2. Swap partition
+
+$  n
+$  p
+$  2
+$  [ENTER]
+$  +8G
+$  Y
+
+    3.3. Root partition
+
+$  n
+$  p
+$  3
+$  [ENTER]
+$  +20G
+$  Y
+
+    3.4. Home partition
+
+$  n
+$  p
+$  4
+$  [ENTER]
+$  [ENTER]
+$  Y
+
+    3.5. Check and write
+
+$  p # should have 4 partition
+$  w # be careful: deletes everything
+
+4. Make filesystem, mount and install
+
+$  lsblk
+$  mkfs.ext4 /dev/sda1
+$  mkfs.ext4 /dev/sda3
+$  mkfs.ext4 /dev/sda4
+$  mkswap /dev/sda2
+$  swapon /dev/sda2
+$  mount /dev/sda3 /mnt
+$  mkdir /mnt/boot
+$  mount /dev/sda1 /mnt/boot
+$  mkdir /mnt/home
+$  mount /dev/sda4 /mnt/home
+$  pacstrap /mnt base base-devel vim      # actually install base, base-devel and vim packages
+
+5. Make filesystem tab
+
+$  genfstab -U /mnt >> /mnt/etc/fstab
+$  cat /mnt/etc/fstab
+$  arch-chroot /mnt
+$  pacman -S networkmanager
+$  systemctl enable NetworkManager
+$  pacman -S grub
+$  grub-install --target=i386-pc /dev/sda
+$  grub-mkconfig -o /boot/grub/grub.cfg
+
+6. Set password, locale, timezone etc.
+
+$  passwd
+$  vim /etc/locale.gen
+# uncomment en_US.UTF-8 UTF-8, en_US ISO-8859-1
+$  locale-gen
+$  vim /etc/locale.conf
+# write: LANG=en_US.UTF-8
+$  ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+$  vim /etc/hostname
+# write: x200
+
+7. Wrap-up everything
+
+$  exit
+$  umount -R /mnt
+$  reboot
+# Success!!!
+
+8. Post install
+
+# to connect to wifi, use:
+# nmcli dev wifi connect <SSID> password <password>
+# For example:
+$  nmcli dev wifi connect "contabikillers :)" password euamo@firma
+
+# to install Luke's setup
+$  curl -LO larbs.xyz/larbs.sh
+$  bash larbs.sh
+
+locale list-keymaps
+br-abnt2
+vim /etc/vconsole.conf
+KEYMAP=br-abnt2
