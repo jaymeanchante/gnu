@@ -63,8 +63,8 @@ make
 sudo make install
 
 # tensorflow container
-docker pull tensorflow/tensorflow:latest-gpu-py3
-docker run --runtime=nvidia -it -p 8888:8888 tensorflow/tensorflow:nightly-py3
+docker pull tensorflow/tensorflow:latest-gpu-py3-jupyter
+docker run --runtime=nvidia -it -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter
 
 # rapidsai container
 docker pull rapidsai/rapidsai:ubuntu1604_cuda92_py35
