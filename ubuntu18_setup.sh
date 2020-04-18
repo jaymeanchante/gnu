@@ -90,3 +90,6 @@ users=' | sudo tee -a /etc/geoclue/geoclue.conf
 # gimp
 sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
 sudo apt-get install -y gimp
+
+# v4l2loopback - a kernel module for creating virtual video devices
+sudo apt-get install -y v4l2loopback-dkms v4l2loopback-utils
