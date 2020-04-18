@@ -3,7 +3,7 @@ sudo apt autoremove
 sudo apt-get update
 
 # utils
-sudo apt-get install adb htop git neofetch python3-dev python3-venv
+sudo apt-get install -y adb cmake htop git libncurses5-dev libncursesw5-dev neofetch python3-dev python3-venv
 
 # thunderbird
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa -y
@@ -12,6 +12,15 @@ sudo apt-get install thunderbird
 # nvidia drivers
 sudo add-apt-repository -y ppa:graphics-drivers/ppa
 sudo ubuntu-drivers autoinstall
+
+# nvtop
+cd /tmp
+git clone https://github.com/Syllo/nvtop
+mkdir -p nvtop/build && cd nvtop/build
+cmake ..
+make
+sudo make install
+cd
 
 # docker
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
