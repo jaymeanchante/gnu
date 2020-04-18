@@ -10,7 +10,8 @@ sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa -y
 sudo apt-get install thunderbird
 
 # nvidia drivers
-ubuntu-drivers autoinstall
+sudo add-apt-repository -y ppa:graphics-drivers/ppa
+sudo ubuntu-drivers autoinstall
 
 # docker
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -63,3 +64,7 @@ echo '
 allowed=true
 system=false
 users=' | sudo tee -a /etc/geoclue/geoclue.conf
+
+# gimp
+sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
+sudo apt-get install -y gimp
