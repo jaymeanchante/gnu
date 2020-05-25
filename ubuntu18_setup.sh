@@ -102,4 +102,4 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 
 # latex
-sudo apt-get install -y impressive pandoc texlive-latex-recommended
+sudo apt-get install -y impressive pandoc texlive-latex-recommended texlive-pictures
