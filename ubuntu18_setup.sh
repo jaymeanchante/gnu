@@ -3,7 +3,7 @@ sudo apt autoremove
 sudo apt-get update
 
 # utils
-sudo apt-get install -y adb cmake htop git libncurses5-dev libncursesw5-dev neofetch python3-dev python3-venv
+sudo apt-get install -y cmake htop git libncurses5-dev libncursesw5-dev neofetch python3-dev python3-venv
 
 # thunderbird
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa -y
@@ -103,3 +103,6 @@ sudo apt-get update && sudo apt-get install yarn
 
 # latex
 sudo apt-get install -y impressive pandoc texlive-latex-recommended texlive-pictures
+
+# phone
+sudo apt-get install adb fastboot
