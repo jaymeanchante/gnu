@@ -24,3 +24,7 @@ adb kill-server
 ```
 5. Reboot phone
 6. On the phone head to Settings > Languages & Input > Virtual keyboard > Android keyboard (AOSP) > Gesture typing > enable it
+
+## Tips
+
+If `adb root` fails with a message "adbd cannot run as root in production builds", open Magisk Manager > Setings > uncheck Magisk Hide and reboot phone, an option to enable root access will show in Settings > System > Developer options > Root access.
