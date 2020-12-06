@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# tips
+# turn off onscreen keyboard: gsettings set org.gnome.desktop.a11y.applications screen-keyboard-enabled false
+# turn off phone screen: wlr-randr --output DSI-1 --off
+
 # system wide update
 sudo pacman -Syu
 
@@ -24,7 +28,7 @@ sudo pacman -S \
 	sdl2 \
 	sdl2_mixer \
 	libpng \
-	wlr-randr \ # wlr-randr --output DSI-1 --off
+	wlr-randr
 
 # android apps
 sudo pacman -S anbox anbox-image-aarch64 adb
