@@ -16,7 +16,7 @@ Based on [this Reddit thread](https://www.reddit.com/r/LineageOS/comments/9mgpbk
 4. Push "libjni_latinimegoogle.so" to "/system/lib" on your phone by running:
 ```
 adb devices
-adb root
+adb root # if received 'adbd cannot run as root in production builds', turn off MagiskHide, reboot, then Settings > Developer options > Root access > ADB only
 adb remount
 adb push libjni_latinimegoogle.so /system/lib/
 adb unroot
