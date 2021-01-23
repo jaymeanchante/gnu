@@ -1,0 +1,106 @@
+(fdroid) 1010! Klooni
+(fdroid) 1toX
+(fdroid) ad-free
+(fdroid) AdAway
+(fdroid) AntennaPod
+(fdroid) Aurora Store
+(fdroid) BatteryCalibrate
+(fdroid) Binaural Beats
+(aurora) Blueheart
+(aurora) Bradesco Seguros
+(fdroid) Breathly
+(fdroid) build.pro Editor
+(aurora) Caixa
+(fdroid) Chess
+(aurora) Cittamobi
+(fdroid) CrossWords
+(aurora) Discord
+(fdroid) DAVx5
+(fdroid) Deck
+(fdroid) Disroot app
+(fdroid) Drum On!
+(fdroid) DuckduckGo
+(aurora) Duolingo
+(aurora) Easy Clocking
+(aurora) Emby
+(fdroid) F-Droid
+(fdroid) Fast Shopping
+(fdroid) FastHub-Libre
+(fdroid) Fedilab
+(fdroid) Feeder
+(fdroid) Fennec
+(aurora) Fix
+(fdroid) Forecastie
+(fdroid) GitFox
+(fdroid) Goodtime
+(fdroid) GPSTest
+(fdroid) Habits
+(aurora) Headphones
+(aurora) HIIT | Down Dog
+(fdroid) HN
+(fdroid) ImgurViewer
+(fdroid) InstaGrabber
+(aurora) Inter
+(fdroid) Jitsi Meet
+(fdroid) KeePassDX
+(fdroid) Lexica
+(aurora) LG TV Plus
+(fdroid) LibreSpeed
+(fdroid) LibreTrivia
+(aurora) LinkedIn
+(fdroid) Magisk Manager
+(fdroid) Meditation Assistant
+(fdroid) Mercado Pago
+(fdroid) microG Settings
+(fdroid) Minetest
+(fdroid) MoneyBuster
+(fdroid) MoneyWallet
+(fdroid) MuPDF viewer
+(aurora) Netflix
+(fdroid) Newpipe
+(fdroid) News
+(fdroid) Nextcloud
+(fdroid) Noice
+(fdroid) NoSurf for reddit
+(fdroid) Notes
+(aurora) Nubank
+(fdroid) Om
+(fdroid) Open Chaos Chess
+(fdroid) OpenTracks
+(fdroid) OSM Daskboard
+(fdroid) OsmAnd~
+(fdroid) Power App
+(fdroid) ProtonVPN
+(fdroid) QR Scanner
+(fdroid) Quinb
+(fdroid) RaspFinder
+(fdroid) RasPi Check
+(fdroid) Reardrops
+(fdroid) Red Moon
+(fdroid) Retro Breaker
+(fdroid) Slide
+(aurora) Spotify
+(aurora) Stremio
+(fdroid) SudoQ
+(aurora) Supreader
+(fdroid) SUSI.AI
+(fdroid) System usage
+(aurora) Tandem
+(fdroid) Tasks
+(aurora) Teams
+(fdroid) Telegram FOSS
+(fdroid) Termux
+(fdroid) Track & Graph
+(fdroid) Tremotesf
+(fdroid) Twire
+(aurora) Uber Lite
+(fdroid) UnicodePad
+(fdroid) UntrackMe
+(fdroid) usageDirect
+(fdroid) VectorPinball
+(aurora) Whatsapp
+(fdroid) WiFiAnalyzer
+(fdroid) Yet Another Call Blocker
+(aurora) Yoga | Down Dog
+(aurora) Youper
+(fdroid) Zoysii
