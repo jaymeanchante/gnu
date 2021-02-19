@@ -48,3 +48,30 @@ sudo pacman -S mpv mps-youtube
 # setup
 sudo systemctl start sshd.service
 sudo systemctl enable sshd.service
+
+# redshift
+sudo pacman -S pkg-config
+yay -S redshift-wayland-git
+
+## create start script
+echo '#!/bin/bash
+export DISPLAY=:0
+export XDG_RUNTIME_DIR=/run/user/1000
+/usr/bin/redshift -l -30:-51 -m wayland' | sudo tee /usr/local/bin/start_redshift.sh
+sudo chmod +x /usr/local/bin/start_redshift.sh
+
+## create systemd service
+echo '[Unit]
+Description=start redshift with wayland
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/start_redshift.sh
+
+[Install]
+WantedBy=multi-user.target' | sudo tee /etc/systemd/system/redshift.service
+sudo chmod 640 /etc/systemd/system/redshift.service
+## setup service
+sudo systemctl daemon-reload
+sudo systemctl enable redshift
+sudo systemctl start redshift
